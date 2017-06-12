@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MonkeyFinal.View.EnderecoPage"
+             x:Name="Endereço">
+    <ContentPage.Content>
+        <StackLayout Margin="10">
+            <Label Text="Cep" FontSize="Medium"/>
+            <Label Text="{Binding endereco.cep}"/>
+            <Label Text="Logradouro" FontSize="Medium"/>
+            <Label Text="{Binding endereco.logradouro}"/>
+            <Label Text="complemento" FontSize="Medium"/>
+            <Label Text="{Binding endereco.complemento}"/>
+            <Label Text="bairro" FontSize="Medium"/>
+            <Label Text="{Binding endereco.bairro}"/>
+            <Label Text="localidade" FontSize="Medium"/>
+            <Label Text="{Binding endereco.localidade}"/>
+            <Label Text="uf" FontSize="Medium"/>
+            <Label Text="{Binding endereco.uf}"/>
+            <Label Text="unidade" FontSize="Medium"/>
+            <Label Text="{Binding endereco.unidade}"/>
+            <Label Text="ibge" FontSize="Medium"/>
+            <Label Text="{Binding endereco.ibge}"/>
+            <Label Text="gia" FontSize="Medium"/>
+            <Label Text="{Binding endereco.gia}"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

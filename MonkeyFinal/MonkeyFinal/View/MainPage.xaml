@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MonkeyFinal"
+             x:Class="MonkeyFinal.MainPage"
+             x:Name="Busaca Cep">
+
+    <StackLayout>
+
+        <Button Text="Logar com FaceBook"
+                BackgroundColor="Blue"
+                FontSize="Medium"
+                TextColor="White"
+                x:Name="LoginButton"
+            ></Button>
+
+        <Label TextColor="Black"
+               FontSize="Medium"
+               x:Name="InfoLabel"/>
+
+        <Label Text="CEP" FontSize="Medium" Margin="10"/>
+        <Entry Text="{Binding Cep}" Margin="10"/>
+        <Button Text="Buscar" Command="{Binding BuscaCommand}"></Button>
+
+    </StackLayout>
+</ContentPage>
