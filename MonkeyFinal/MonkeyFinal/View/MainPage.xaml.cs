@@ -1,7 +1,10 @@
-﻿using MonkeyFinal.Service;
+﻿using Microsoft.WindowsAzure.MobileServices;
+using MonkeyFinal.Service;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
@@ -21,9 +24,13 @@ namespace MonkeyFinal
             LoginButton.Clicked += async (sender, args) =>
             {
                 var user = await azureService.LoginAsync();
+
+                var userinfo = azureService.Client.InvokeApiAsync("/.auth/me");
+
                 InfoLabel.Text = (user != null) ? $"Bem vindo: {user.UserId}" : "Falha no login, tente novamente!";
             };
 
         }
+
     }
 }
